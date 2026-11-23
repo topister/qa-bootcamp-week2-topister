@@ -69,3 +69,13 @@ Run these steps in order from a terminal.
 
 - `npm run check`: checks your `.env` and that you can reach the Toolshop API.
 - `npm test`: runs the Playwright tests in `tests/`.
+
+#### Week 2 – Day 6: TypeScript Basics & Profile Validator
+
+## src/ts-basics/: 
+Core TypeScript exercises practicing primitive types, type aliases, optional properties, and typed functions.
+
+## src/profile-validator.ts:
+
+
+Defines a typed UserProfile model and an isNotified(user) helper using optional chaining (?.) and (??) to safely handle missing settings or notifications fields without runtime errors.
