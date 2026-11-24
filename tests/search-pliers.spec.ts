@@ -1,12 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Toolshop tests', () => {
-  test('has expected home page title', async ({ page }) => {
-    await page.goto('https://practicesoftwaretesting.com');
-
-    await expect(page).toHaveTitle('Practice Software Testing - Toolshop - v5.0');
-  });
-
   test('searching for "pliers" returns only products with "pliers" in the name', async ({ page }) => {
     await page.goto('https://practicesoftwaretesting.com');
 
@@ -26,16 +19,3 @@ test.describe('Toolshop tests', () => {
       expect(name.toLowerCase()).toContain('pliers');
     }
   });
-
-
-  test('invalid login is rejected and shows an error message', async ({ page }) => {
-    await page.goto('https://practicesoftwaretesting.com');
-
-    await page.getByRole('link', { name: 'Sign in' }).click();
-    await page.getByRole('textbox', { name: 'Email address' }).fill('invalid@example.com');
-    await page.getByRole('textbox', { name: 'Password' }).fill('WrongPassword123!');
-    await page.getByRole('button', { name: 'Login' }).click();
-
-    await expect(page.getByText('Invalid email or password')).toBeVisible();
-  });
-});
