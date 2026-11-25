@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
-import { HomePage } from "../pages/home.page";
-import { ProductPage } from "../pages/product.page";
-import { CartPage } from "../pages/cart.page";
+import { HomePage } from "../pages/HomePage";
+import { ProductPage } from "../pages/ProductPage";
+import { CartPage } from "../pages/CartPage";
 
 const toCents = (text: string) => Math.round(Number(text.replace(/[^0-9.]/g, "")) * 100);
 const toMoney = (cents: number) => `$${(cents / 100).toFixed(2)}`;
