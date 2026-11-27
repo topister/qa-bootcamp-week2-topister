@@ -37,6 +37,7 @@ test('C4 Add to a cart', async ({ request }) => {
   } finally {
     // Cleanup: remove the cart so the shared site isn't left with stray data.
     const deleteRes = await cartsApi.deleteCart(cartId);
+    console.log('DELETE status:', deleteRes.status());
     expect([200, 204]).toContain(deleteRes.status());
   }
 });

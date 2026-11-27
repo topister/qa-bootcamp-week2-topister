@@ -12,6 +12,7 @@ test('C3 Sort by price', async ({ page }) => {
   // Act: choose the sort the shopper would choose.
   await home.sortBy('Price (Low - High)');
 
+
   // Assert: expect.poll retries until the prices are in order, so there is no fixed wait.
   await expect
     .poll(
