@@ -5,7 +5,7 @@ So that I can review accurate item prices and totals before checkout 
 
 Background:
 Given the shopper is browsing the Toolshop catalog 
-
+@cart-total
 Scenario: Add multiple products to the cart and verify the total
 When the shopper adds "Combination Pliers" priced at "$14.15" to the cart
 And the shopper adds "Bolt Cutters" priced at "$48.41" to the cart

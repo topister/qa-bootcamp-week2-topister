@@ -5,8 +5,8 @@ test.describe('Toolshop tests', () => {
     await page.goto('https://practicesoftwaretesting.com');
 
     await expect(page).toHaveTitle('Practice Software Testing - Toolshop - v5.0');
-    
-    // Intentionally broken assertion
+    // Intentionally broken assertion to record a failure trace
     // await expect(page).toHaveTitle('Practice Software Testing - Wrong Title');
+    
   });
 });

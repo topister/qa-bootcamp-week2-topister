@@ -20,4 +20,7 @@ export class HomePage {
   async openInStockProduct(index: number) {
     await this.inStockCards.nth(index).click();
   }
+  async openProduct(name: string) {
+    await this.productCards.filter({ hasText: name }).first().click();
+  }
 }
